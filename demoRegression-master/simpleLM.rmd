@@ -19,15 +19,23 @@ bears$MONTH<- as.factor(bears$MONTH)
 ```
 
 ## Model WEIGHT ~ NECK  this is an example  
-
+Neck
 ```{r}
 simp <- lm(WEIGHT~NECK,data=bears)
 plot(WEIGHT~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
-
-
+Chest
+```{r}
+simp <- lm(WEIGHT~CHEST,data=bears)
+plot(WEIGHT~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+Chest: Adjusted R-squared 0.9262  RSE- 33.08
+
 Neck: Adjusted R-squared 0.87  RSE- 43.91
+
